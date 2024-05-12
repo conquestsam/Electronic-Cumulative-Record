@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counsellor Dashboard</title>
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="University Management System">
+            <img src="./assets/ECR 1.png" alt="">
+            <h2>e<span class="danger">CRS</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="index.html" class="active">
+                <span class="material-icons-sharp">home</span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="timetable.html" onclick="timeTableAll()">
+                <span class="material-icons-sharp">today</span>
+                <h3>List</h3>
+            </a> 
+            <a href="exam.html">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Setting</h3>
+            </a>
+            <a href="password.html">
+                <span class="material-icons-sharp">password</span>
+                <h3>Change Password</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>Logout</h3>
+            </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <p><b>Adeyemi</b> </p>
+                        <small class="text-muted">12102030</small>
+                    </div>
+                </div>
+                <div class="about">
+                    <h5>Course</h5>
+                    <p>Counsellor Education Department </p>
+                    <h5>DOB</h5>
+                    <p>29-Feb-0000</p>
+                    <h5>Contact</h5>
+                    <p>+2348061410856</p>
+                    <h5>Email</h5>
+                    <p>conqueststat@icloud.com </p>
+                    <h5>Address</h5>
+                    <p>University of Ilorin</p>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <div class="form-container">
+                <h1>Students Personal Data</h1>
+
+                <form action="registration-success.html">
+                    <div class="input-group">
+                      <label><strong>Name of Student (Surname First):</strong></label>
+                      <input type="text" placeholder="Enter Your First Name" id="fname">
+                      <label><strong>Last Name:</strong></label>
+                      <input type="text" placeholder="Enter Your Last Name" id="lname">
+                    </div>
+              
+                    <div class="input-group">
+                        <label><strong>Gender:</strong></label>
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="male" id="male">
+                        <label for="male">Male</label> 
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;"name="gender" value="female" id="female">
+                        <label for="female">Female</label> 
+                      </div> 
+
+                      <div class="input-group">
+                        <label> <strong>Admission No: </strong> </label>
+                        <input type="number" id="admissionNo">
+                        <label> <strong>Year of Admission: </strong> </label>
+                        <input type="number" id="YearOfAdmi">
+                        <label> <strong>College House: </strong> </label>
+                        <input type="text" id="CollegeHouse">
+                      </div>
+
+                      <div class="input-group">
+                        <label><strong>Date of Birth</strong></label>
+                        <input type="date" id="dob">
+                        <label><strong>Age</strong></label>
+                        <input type="number" id="age">
+                      </div>
+                      
+                      <div class="input-group">
+                        <label><strong>Permanent Home Address:</strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                      </div>
+
+                      <div class="input-group">
+                        <label><strong>Contact Address:</strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                      </div>
+
+                      <div class="input-group">
+                        <label><strong>Country</strong></label>
+                        <input type="text" id="country">
+                        <label><strong>State of Origin</strong></label>
+                        <input type="text" id="SOG">
+                        <label><strong>Place of Birth</strong></label>
+                        <input type="text" id="POB">
+                      </div>
+
+                      <div class="input-group">
+                        <label><strong>Religion:</strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                      </div>
+
+                      <div class="input-group">
+                        <label><strong>Language Spoken:</strong></label>
+                        <input type="text" id="country">
+                        <label><strong>Countries Visited:</strong></label>
+                        <input type="text" id="SOG">
+                        
+                      </div>
+                      <div class="input-group">
+                        <label><strong>Change of Name (If any):</strong></label>
+                        <input type="text" id="country">
+                        <label><strong>Date:</strong></label>
+                        <input type="date" id="SOG">
+                      </div>
+
+                      <div class="input-group">
+                        <label> <strong>Evidence</strong></label>
+                        <input type="file">
+                      </div>        
+                      
+                    <h2>Family Background</h2>
+                    <h4>Father's Information</h4>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Contact Address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Residential address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Mobile Number: </strong></label>
+                        <input type="tel" placeholder="Enter Phone Number" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Country: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>State of Origin: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Religion: </strong></label>
+                        <input type="text" placeholder="Enter Your Religion" id="fname">
+                    
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Educational Level: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Occupation: </strong></label>
+                        <input type="text" id="fname">    
+                                        
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Deceased:</strong></label>
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="male" id="male">
+                        <label for="male">Yes</label> 
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;"name="gender" value="female" id="female">
+                        <label for="female">No</label> 
+                    </div>
+
+                    <h4>Mother's Information</h4>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Contact Address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Residential address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Mobile Number: </strong></label>
+                        <input type="tel" placeholder="Enter Phone Number" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Country: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>State of Origin: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Religion: </strong></label>
+                        <input type="text" placeholder="Enter Your Religion" id="fname">
+                    
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Educational Level: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Occupation: </strong></label>
+                        <input type="text" id="fname">    
+                                        
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Deceased:</strong></label>
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="male" id="male">
+                        <label for="male">Yes</label> 
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;"name="gender" value="female" id="female">
+                        <label for="female">No</label> 
+                    </div>
+
+                    
+                    <h4>Guardian's Information</h4>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Contact Address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="address">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Residential address: </strong></label>
+                        <input type="text" placeholder="Enter Your Address" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Mobile Number: </strong></label>
+                        <input type="tel" placeholder="Enter Phone Number" id="fname">
+                    
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Country: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>State of Origin: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Religion: </strong></label>
+                        <input type="text" placeholder="Enter Your Religion" id="fname">
+                    
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Educational Level: </strong></label>
+                        <input type="text" id="fname">
+                        <label><strong>Occupation: </strong></label>
+                        <input type="text" id="fname">    
+                                        
+                    </div>
+
+                    <div class="input-group">
+                        <label><strong>Deceased:</strong></label>
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;" name="gender" value="male" id="male">
+                        <label for="male">Yes</label> 
+                        <input type="radio" style="flex-basis: 0%; margin: 0 10px;"name="gender" value="female" id="female">
+                        <label for="female">No</label> 
+                    </div>
+
+                    <h1>EDUCATIONAL BACKGROUND </h1>
+                    <h3>Nursery School </h3>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Year of Attendance: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">
+                        <label><strong>Year Left: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">                     
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Reason for Leaving: </strong></label>
+                        <input type="text" placeholder="Enter every reasons responsible for leaving" id="fname">
+                        <label><strong>Certificate Number </strong></label>
+                        <input type="number" placeholder="Cert No" id="fname"> 
+                        <p><a href="#">Add more nursery School</a></p>
+                    
+                    </div>
+                    
+                    <h3>Primary School </h3>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Year of Attendance: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">
+                        <label><strong>Year Left: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">                     
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Reason for Leaving: </strong></label>
+                        <input type="text" placeholder="Enter every reasons responsible for leaving" id="fname">
+                        <label><strong>Certificate Number </strong></label>
+                        <input type="number" placeholder="Cert No" id="fname"> 
+                        <p><a href="#">Add more Primary School</a></p>
+                    
+                    </div>
+
+                    <h3>Junior Secondary School </h3>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Year of Attendance: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">
+                        <label><strong>Year Left: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">                     
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Reason for Leaving: </strong></label>
+                        <input type="text" placeholder="Enter every reasons responsible for leaving" id="fname">
+                        <label><strong>Certificate Number </strong></label>
+                        <input type="number" placeholder="Cert No" id="fname"> 
+                        <p><a href="#">Add more Junior Secondary School</a></p>
+                    
+                    </div>
+
+                    <h3>Senior Secondary School </h3>
+                    <div class="input-group">
+                        <label><strong>Name (Surname first): </strong></label>
+                        <input type="text" placeholder="Enter Full name" id="fname">
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Year of Attendance: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">
+                        <label><strong>Year Left: </strong></label>
+                        <input type="number" placeholder="What Year did you entered?" id="fname">                     
+                    </div>
+                    <div class="input-group">
+                        <label><strong>Reason for Leaving: </strong></label>
+                        <input type="text" placeholder="Enter every reasons responsible for leaving" id="fname">
+                        <label><strong>Certificate Number </strong></label>
+                        <input type="number" placeholder="Cert No" id="fname"> 
+                        <p><a href="#">Add more Senior Secondary School</a></p>
+                    
+                    </div>
+
+
+                    <h2>OTHER INFORMATION</h2>
+                    <div class="input-group">
+                        <textarea name="other" id="others" cols="30" rows="10"> Drop a message </textarea>
+                    
+                    </div>
+                  <button >Submit</button>
+                 
+                </form>
+
+                
+          
+
+
+                </div>
+            
+            
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div class="updates">
+                    <div class="message">
+                        <p> <b>Academic</b> Summer training internship with Live Projects.</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Co-curricular</b> Global internship oportunity by Student organization.</p>
+                        <small class="text-muted">10 Minutes Ago</small>
+                    </div>
+                    <div class="message">
+                        <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
+                        <small class="text-muted">Yesterday</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaves">
+                <h2>Director</h2>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>Dr Mustapha</h3>
+                        <small class="text-muted">Full Day</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-3.jpg" alt=""></div>
+                    <div class="info">
+                        <h3>Dr Shuaib</h3>
+                        <small class="text-muted">Half Day</small>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-4.jpg" alt=""></div>
+                    <div class="info">
+                        <h3>Dr Michael</h3>
+                        <small class="text-muted">Full Day</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
